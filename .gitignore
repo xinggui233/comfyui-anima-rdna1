@@ -1,0 +1,32 @@
+# 模型文件（体积大，且各有授权，不进仓库）
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.onnx
+*.gguf
+
+# ComfyUI 运行时产物
+output/
+input/
+temp/
+models/*
+!models/README.md
+user/
+*.log
+comfyui.db*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.python-version
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,3618 @@
+{
+  "id": "b8c8c01b-8fa7-497b-a416-16561cf36be6",
+  "revision": 1,
+  "last_node_id": 106,
+  "last_link_id": 243,
+  "nodes": [
+    {
+      "id": 96,
+      "type": "VAEDecodeTiled",
+      "pos": [
+        4467.034179430274,
+        586.5088589933047
+      ],
+      "size": [
+        210,
+        150
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 225
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 226
+        },
+        {
+          "localized_name": "分块尺寸",
+          "name": "tile_size",
+          "type": "INT",
+          "widget": {
+            "name": "tile_size"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "重叠",
+          "name": "overlap",
+          "type": "INT",
+          "widget": {
+            "name": "overlap"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "时间尺寸",
+          "name": "temporal_size",
+          "type": "INT",
+          "widget": {
+            "name": "temporal_size"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "时间重叠",
+          "name": "temporal_overlap",
+          "type": "INT",
+          "widget": {
+            "name": "temporal_overlap"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            227
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.35.1",
+        "Node name for S&R": "VAEDecodeTiled"
+      },
+      "widgets_values": [
+        512,
+        64,
+        64,
+        8
+      ],
+      "widgets_values_named": {
+        "tile_size": 512,
+        "overlap": 64,
+        "temporal_size": 64,
+        "temporal_overlap": 8
+      }
+    },
+    {
+      "id": 52,
+      "type": "VAEDecode",
+      "pos": [
+        2814.6557692323004,
+        503.02627017007717
+      ],
+      "size": [
+        140,
+        46
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 163
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 154
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            116
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.35.1",
+        "Node name for S&R": "VAEDecode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 93,
+      "type": "StringConcatenate",
+      "pos": [
+        -75.29920764964699,
+        388.58338718661906
+      ],
+      "size": [
+        210,
+        166
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "字符串A",
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 240
+        },
+        {
+          "localized_name": "字符串B",
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": null
+        },
+        {
+          "label": "分隔符",
+          "localized_name": "分隔符",
+          "name": "delimiter",
+          "type": "STRING",
+          "widget": {
+            "name": "delimiter"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            221
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.35.1",
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "",
+        "",
+        ", "
+      ],
+      "widgets_values_named": {
+        "string_a": "",
+        "string_b": "",
+        "delimiter": ", "
+      }
+    },
+    {
+      "id": 102,
+      "type": "StringConcatenate",
+      "pos": [
+        -443.7001809092808,
+        374.2968562489695
+      ],
+      "size": [
+        210,
+        166
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "字符串A",
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 238
+        },
+        {
+          "localized_name": "字符串B",
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 239
+        },
+        {
+          "label": "分隔符",
+          "localized_name": "分隔符",
+          "name": "delimiter",
+          "type": "STRING",
+          "widget": {
+            "name": "delimiter"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            240
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.35.1",
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "",
+        "",
+        ", "
+      ],
+      "widgets_values_named": {
+        "string_a": "",
+        "string_b": "",
+        "delimiter": ", "
+      }
+    },
+    {
+      "id": 86,
+      "type": "easy loraStackApply",
+      "pos": [
+        1317.939981398664,
+        596.2174328709683
+      ],
+      "size": [
+        140,
+        66
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "LoRA堆可选",
+          "localized_name": "LoRA堆可选",
+          "name": "lora_stack",
+          "type": "LORA_STACK",
+          "link": 184
+        },
+        {
+          "label": "模型",
+          "localized_name": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 193
+        },
+        {
+          "label": "CLIP(可选)",
+          "localized_name": "CLIP(可选)",
+          "name": "optional_clip",
+          "shape": 7,
+          "type": "CLIP",
+          "link": 194
+        }
+      ],
+      "outputs": [
+        {
+          "label": "模型",
+          "localized_name": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            195,
+            196
+          ]
+        },
+        {
+          "label": "CLIP",
+          "localized_name": "CLIP",
+          "name": "clip",
+          "type": "CLIP",
+          "links": [
+            197,
+            198
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1.3.6",
+        "Node name for S&R": "easy loraStackApply"
+      }
+    },
+    {
+      "id": 20,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1749.951191630098,
+        515.8693628244853
+      ],
+      "size": [
+        390,
+        170
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 197
+        },
+        {
+          "localized_name": "文本",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 217
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            142,
+            166
+          ]
+        }
+      ],
+      "title": "正面提示词编码",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.35.1",
+        "Node name for S&R": "CLIPTextEncode",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "text": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        ""
+      ],
+      "widgets_values_named": {
+        "text": ""
+      },
+      "color": "#5b392d",
+      "bgcolor": "#71483a"
+    },
+    {
+      "id": 21,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1753.3584451228116,
+        782.1800436764629
+      ],
+      "size": [
+        390,
+        170
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 198
+        },
+        {
+          "localized_name": "文本",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            143,
+            167
+          ]
+        }
+      ],
+      "title": "负面提示词编码",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.35.1",
+        "Node name for S&R": "CLIPTextEncode",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "text": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        ""
+      ],
+      "widgets_values_named": {
+        "text": ""
+      },
+      "color": "#4d2a31",
+      "bgcolor": "#623841"
+    },
+    {
+      "id": 9,
+      "type": "EmptyLatentImage",
+      "pos": [
+        463.1737046315299,
+        235.60325685371743
+      ],
+      "size": [
+        409.26089524220083,
+        133.7895883261151
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "宽度",
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "高度",
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "批量大小",
+          "name": "batch_size",
+          "type": "INT",
+          "widget": {
+            "name": "batch_size"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            162
+          ]
+        }
+      ],
+      "title": "长宽",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.35.1",
+        "Node name for S&R": "EmptyLatentImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "width": true,
+            "height": true,
+            "batch_size": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        768,
+        1152,
+        1
+      ],
+      "widgets_values_named": {
+        "width": 768,
+        "height": 1152,
+        "batch_size": 1
+      },
+      "color": "#37445a",
+      "bgcolor": "#485873"
+    },
+    {
+      "id": 69,
+      "type": "CLIPLoader",
+      "pos": [
+        476.2174771986418,
+        562.1893288526718
+      ],
+      "size": [
+        390,
+        150
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "CLIP名称",
+          "name": "clip_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "clip_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "类型",
+          "name": "type",
+          "type": "COMBO",
+          "widget": {
+            "name": "type"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "设备",
+          "name": "device",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            194
+          ]
+        }
+      ],
+      "title": "正常图",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.35.1",
+        "Node name for S&R": "CLIPLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "clip_name": true,
+            "type": true,
+            "device": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Anima\\qwen_3_06b_base.safetensors",
+        "stable_diffusion",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "Anima\\qwen_3_06b_base.safetensors",
+        "type": "stable_diffusion",
+        "device": "default"
+      },
+      "color": "#55452b",
+      "bgcolor": "#6a5838"
+    },
+    {
+      "id": 75,
+      "type": "KSampler",
+      "pos": [
+        3894.6196473009354,
+        425.7794745525052
+      ],
+      "size": [
+        248.5050898647769,
+        474.0000000000001
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 196
+        },
+        {
+          "localized_name": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 142
+        },
+        {
+          "localized_name": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 143
+        },
+        {
+          "localized_name": "Latent图像",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 144
+        },
+        {
+          "localized_name": "种子",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": 146
+        },
+        {
+          "localized_name": "步数",
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg",
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "采样器名称",
+          "name": "sampler_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "sampler_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "调度器",
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "降噪",
+          "name": "denoise",
+          "type": "FLOAT",
+          "widget": {
+            "name": "denoise"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            225
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.35.1",
+        "Node name for S&R": "KSampler",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "seed": true,
+            "steps": true,
+            "cfg": true,
+            "sampler_name": true,
+            "scheduler": true,
+            "denoise": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        233107080273490,
+        "randomize",
+        15,
+        7,
+        "dpmpp_2m",
+        "karras",
+        0.7
+      ],
+      "widgets_values_named": {
+        "seed": 233107080273490,
+        "control_after_generate": "randomize",
+        "steps": 15,
+        "cfg": 7,
+        "sampler_name": "dpmpp_2m",
+        "scheduler": "karras",
+        "denoise": 0.7
+      }
+    },
+    {
+      "id": 67,
+      "type": "VAELoader",
+      "pos": [
+        472.35791410138125,
+        410.7819183879868
+      ],
+      "size": [
+        390,
+        105
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "vae名称",
+          "name": "vae_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae_name"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            154,
+            226
+          ]
+        }
+      ],
+      "title": "正常图",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.35.1",
+        "Node name for S&R": "VAELoader",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "vae_name": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Anima\\qwen_image_vae.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "Anima\\qwen_image_vae.safetensors"
+      },
+      "color": "#52314f",
+      "bgcolor": "#684064"
+    },
+    {
+      "id": 35,
+      "type": "SaveImage",
+      "pos": [
+        4836.9094396844575,
+        514.363930228173
+      ],
+      "size": [
+        390,
+        270.0000000000001
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "图片",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 227
+        },
+        {
+          "localized_name": "文件名前缀",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "保存图1：2.5D 图片",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.35.1",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "filename_prefix": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "anima_rdna1/anima"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Anima工作流"
+      },
+      "color": "#5d3b32",
+      "bgcolor": "#744a3e"
+    },
+    {
+      "id": 6,
+      "type": "PrimitiveInt",
+      "pos": [
+        468.3483810848125,
+        69.14903405837381
+      ],
+      "size": [
+        384.34087658436965,
+        117.05859588655846
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "数值",
+          "name": "value",
+          "type": "INT",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "整数",
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            146,
+            157
+          ]
+        }
+      ],
+      "title": "随机种子",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.35.1",
+        "Node name for S&R": "PrimitiveInt",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "value": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        -471449352830558,
+        "fixed"
+      ],
+      "widgets_values_named": {
+        "value": -471449352830558,
+        "control_after_generate": "fixed"
+      },
+      "color": "#423653",
+      "bgcolor": "#57476b"
+    },
+    {
+      "id": 57,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -396.28515854298865,
+        710.1677520676864
+      ],
+      "size": [
+        499.5714983941011,
+        404.972159852577
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "文本",
+          "localized_name": "文本",
+          "name": "text",
+          "type": "STRING",
+          "link": 221
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "localized_name": "字符串",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            217
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "Node name for S&R": "ShowText|pysssss",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "masterpiece, best quality, absurdres, 1girl, solo,\nlong silver hair, straight hair, blue eyes, hair ribbon,\nwhite blouse, navy pleated skirt, standing on a rooftop,\nlooking at viewer, gentle smile,\nsunset, warm lighting, city skyline background,\ncinematic composition, detailed background\n, "
+      ],
+      "widgets_values_named": {
+        "text_0": "masterpiece, best quality, absurdres, 1girl, solo,\nlong silver hair, straight hair, blue eyes, hair ribbon,\nwhite blouse, navy pleated skirt, standing on a rooftop,\nlooking at viewer, gentle smile,\nsunset, warm lighting, city skyline background,\ncinematic composition, detailed background\n"
+      }
+    },
+    {
+      "id": 68,
+      "type": "UNETLoader",
+      "pos": [
+        485.42217936159847,
+        766.6422809961596
+      ],
+      "size": [
+        403.4964331293179,
+        103.16274467882454
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "UNet名称",
+          "name": "unet_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "unet_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "数据类型",
+          "name": "weight_dtype",
+          "type": "COMBO",
+          "widget": {
+            "name": "weight_dtype"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            193
+          ]
+        }
+      ],
+      "title": "正常图",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.35.1",
+        "Node name for S&R": "UNETLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "unet_name": true,
+            "weight_dtype": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Anima\\anima_aestheticV11.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "Anima\\anima_aestheticV11.safetensors",
+        "weight_dtype": "default"
+      },
+      "color": "#2a3f5f",
+      "bgcolor": "#354e72"
+    },
+    {
+      "id": 81,
+      "type": "easy loraStack",
+      "pos": [
+        411.2019944754511,
+        1011.2353920699486
+      ],
+      "size": [
+        534.4078083657041,
+        346
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "LoRA堆（可选）",
+          "localized_name": "LoRA堆（可选）",
+          "name": "optional_lora_stack",
+          "shape": 7,
+          "type": "LORA_STACK",
+          "link": 241
+        },
+        {
+          "label": "开关",
+          "localized_name": "开关",
+          "name": "toggle",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "toggle"
+          },
+          "link": null
+        },
+        {
+          "label": "模式",
+          "localized_name": "模式",
+          "name": "mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "mode"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA数量",
+          "localized_name": "LoRA数量",
+          "name": "num_loras",
+          "type": "INT",
+          "widget": {
+            "name": "num_loras"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_1_名称",
+          "localized_name": "LoRA_1_名称",
+          "name": "lora_1_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_1_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_1_权重",
+          "localized_name": "LoRA_1_权重",
+          "name": "lora_1_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_1_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_1_model_strength",
+          "name": "lora_1_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_1_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_1_clip_strength",
+          "name": "lora_1_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_1_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_2_名称",
+          "localized_name": "LoRA_2_名称",
+          "name": "lora_2_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_2_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_2_权重",
+          "localized_name": "LoRA_2_权重",
+          "name": "lora_2_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_2_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_2_model_strength",
+          "name": "lora_2_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_2_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_2_clip_strength",
+          "name": "lora_2_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_2_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_3_名称",
+          "localized_name": "LoRA_3_名称",
+          "name": "lora_3_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_3_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_3_权重",
+          "localized_name": "LoRA_3_权重",
+          "name": "lora_3_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_3_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_3_model_strength",
+          "name": "lora_3_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_3_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_3_clip_strength",
+          "name": "lora_3_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_3_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_4_名称",
+          "localized_name": "LoRA_4_名称",
+          "name": "lora_4_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_4_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_4_权重",
+          "localized_name": "LoRA_4_权重",
+          "name": "lora_4_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_4_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_4_model_strength",
+          "name": "lora_4_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_4_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_4_clip_strength",
+          "name": "lora_4_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_4_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_5_名称",
+          "localized_name": "LoRA_5_名称",
+          "name": "lora_5_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_5_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_5_权重",
+          "localized_name": "LoRA_5_权重",
+          "name": "lora_5_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_5_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_5_model_strength",
+          "name": "lora_5_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_5_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_5_clip_strength",
+          "name": "lora_5_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_5_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_6_名称",
+          "localized_name": "LoRA_6_名称",
+          "name": "lora_6_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_6_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_6_权重",
+          "localized_name": "LoRA_6_权重",
+          "name": "lora_6_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_6_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_6_model_strength",
+          "name": "lora_6_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_6_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_6_clip_strength",
+          "name": "lora_6_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_6_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_7_名称",
+          "localized_name": "LoRA_7_名称",
+          "name": "lora_7_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_7_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_7_权重",
+          "localized_name": "LoRA_7_权重",
+          "name": "lora_7_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_7_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_7_model_strength",
+          "name": "lora_7_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_7_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_7_clip_strength",
+          "name": "lora_7_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_7_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_8_名称",
+          "localized_name": "LoRA_8_名称",
+          "name": "lora_8_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_8_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_8_权重",
+          "localized_name": "LoRA_8_权重",
+          "name": "lora_8_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_8_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_8_model_strength",
+          "name": "lora_8_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_8_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_8_clip_strength",
+          "name": "lora_8_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_8_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_9_名称",
+          "localized_name": "LoRA_9_名称",
+          "name": "lora_9_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_9_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_9_权重",
+          "localized_name": "LoRA_9_权重",
+          "name": "lora_9_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_9_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_9_model_strength",
+          "name": "lora_9_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_9_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_9_clip_strength",
+          "name": "lora_9_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_9_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_10_名称",
+          "localized_name": "LoRA_10_名称",
+          "name": "lora_10_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_10_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_10_权重",
+          "localized_name": "LoRA_10_权重",
+          "name": "lora_10_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_10_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_10_model_strength",
+          "name": "lora_10_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_10_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_10_clip_strength",
+          "name": "lora_10_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_10_clip_strength"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "LoRA堆",
+          "localized_name": "LoRA堆",
+          "name": "lora_stack",
+          "type": "LORA_STACK",
+          "links": [
+            184
+          ]
+        }
+      ],
+      "title": "画风",
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1.3.6",
+        "Node name for S&R": "easy loraStack"
+      },
+      "widgets_values": [
+        true,
+        "simple",
+        5,
+        "Anima\\chen-bin_v4.0.safetensors",
+        0.6,
+        1,
+        1,
+        "Anima\\gulugulu_v1_epoch26.safetensors",
+        0.6,
+        1,
+        1,
+        "Anima\\A1kx_sty-v2.safetensors",
+        0.6,
+        1,
+        1,
+        "Anima\\khstyle_v1_epoch26.safetensors",
+        0.3,
+        1,
+        1,
+        "Anima\\gpt-image-2_anima-base1_v1-1.safetensors",
+        0.3,
+        1,
+        1,
+        "Anima\\Anima_3d skin.safetensors",
+        0,
+        1,
+        1,
+        "Anima\\anima_context_detailer_base10.safetensors",
+        0,
+        1,
+        1,
+        "Anima\\Anima_in_real_update_v2_epoch_20.safetensors",
+        0,
+        1,
+        1,
+        "Anima\\anima-highres-aesthetic-boost.safetensors",
+        1,
+        1,
+        1,
+        "Anima\\Anima_3d skin.safetensors",
+        0,
+        1,
+        1
+      ],
+      "widgets_values_named": {
+        "toggle": true,
+        "mode": "simple",
+        "num_loras": 5,
+        "lora_1_name": "Anima\\chen-bin_v4.0.safetensors",
+        "lora_1_strength": 0.6,
+        "lora_1_model_strength": 1,
+        "lora_1_clip_strength": 1,
+        "lora_2_name": "Anima\\gulugulu_v1_epoch26.safetensors",
+        "lora_2_strength": 0.6,
+        "lora_2_model_strength": 1,
+        "lora_2_clip_strength": 1,
+        "lora_3_name": "Anima\\A1kx_sty-v2.safetensors",
+        "lora_3_strength": 0.6,
+        "lora_3_model_strength": 1,
+        "lora_3_clip_strength": 1,
+        "lora_4_name": "Anima\\khstyle_v1_epoch26.safetensors",
+        "lora_4_strength": 0.3,
+        "lora_4_model_strength": 1,
+        "lora_4_clip_strength": 1,
+        "lora_5_name": "Anima\\gpt-image-2_anima-base1_v1-1.safetensors",
+        "lora_5_strength": 0.3,
+        "lora_5_model_strength": 1,
+        "lora_5_clip_strength": 1,
+        "lora_6_name": "Anima\\Anima_3d skin.safetensors",
+        "lora_6_strength": 0,
+        "lora_6_model_strength": 1,
+        "lora_6_clip_strength": 1,
+        "lora_7_name": "Anima\\anima_context_detailer_base10.safetensors",
+        "lora_7_strength": 0,
+        "lora_7_model_strength": 1,
+        "lora_7_clip_strength": 1,
+        "lora_8_name": "Anima\\Anima_in_real_update_v2_epoch_20.safetensors",
+        "lora_8_strength": 0,
+        "lora_8_model_strength": 1,
+        "lora_8_clip_strength": 1,
+        "lora_9_name": "Anima\\anima-highres-aesthetic-boost.safetensors",
+        "lora_9_strength": 1,
+        "lora_9_model_strength": 1,
+        "lora_9_clip_strength": 1,
+        "lora_10_name": "Anima\\Anima_3d skin.safetensors",
+        "lora_10_strength": 0,
+        "lora_10_model_strength": 1,
+        "lora_10_clip_strength": 1
+      }
+    },
+    {
+      "id": 103,
+      "type": "easy loraStack",
+      "pos": [
+        409.41571226602406,
+        1436.1643105442736
+      ],
+      "size": [
+        534.4078083657041,
+        298
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "LoRA堆（可选）",
+          "localized_name": "LoRA堆（可选）",
+          "name": "optional_lora_stack",
+          "shape": 7,
+          "type": "LORA_STACK",
+          "link": 243
+        },
+        {
+          "label": "开关",
+          "localized_name": "开关",
+          "name": "toggle",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "toggle"
+          },
+          "link": null
+        },
+        {
+          "label": "模式",
+          "localized_name": "模式",
+          "name": "mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "mode"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA数量",
+          "localized_name": "LoRA数量",
+          "name": "num_loras",
+          "type": "INT",
+          "widget": {
+            "name": "num_loras"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_1_名称",
+          "localized_name": "LoRA_1_名称",
+          "name": "lora_1_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_1_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_1_权重",
+          "localized_name": "LoRA_1_权重",
+          "name": "lora_1_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_1_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_1_model_strength",
+          "name": "lora_1_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_1_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_1_clip_strength",
+          "name": "lora_1_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_1_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_2_名称",
+          "localized_name": "LoRA_2_名称",
+          "name": "lora_2_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_2_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_2_权重",
+          "localized_name": "LoRA_2_权重",
+          "name": "lora_2_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_2_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_2_model_strength",
+          "name": "lora_2_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_2_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_2_clip_strength",
+          "name": "lora_2_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_2_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_3_名称",
+          "localized_name": "LoRA_3_名称",
+          "name": "lora_3_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_3_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_3_权重",
+          "localized_name": "LoRA_3_权重",
+          "name": "lora_3_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_3_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_3_model_strength",
+          "name": "lora_3_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_3_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_3_clip_strength",
+          "name": "lora_3_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_3_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_4_名称",
+          "localized_name": "LoRA_4_名称",
+          "name": "lora_4_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_4_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_4_权重",
+          "localized_name": "LoRA_4_权重",
+          "name": "lora_4_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_4_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_4_model_strength",
+          "name": "lora_4_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_4_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_4_clip_strength",
+          "name": "lora_4_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_4_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_5_名称",
+          "localized_name": "LoRA_5_名称",
+          "name": "lora_5_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_5_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_5_权重",
+          "localized_name": "LoRA_5_权重",
+          "name": "lora_5_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_5_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_5_model_strength",
+          "name": "lora_5_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_5_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_5_clip_strength",
+          "name": "lora_5_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_5_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_6_名称",
+          "localized_name": "LoRA_6_名称",
+          "name": "lora_6_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_6_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_6_权重",
+          "localized_name": "LoRA_6_权重",
+          "name": "lora_6_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_6_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_6_model_strength",
+          "name": "lora_6_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_6_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_6_clip_strength",
+          "name": "lora_6_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_6_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_7_名称",
+          "localized_name": "LoRA_7_名称",
+          "name": "lora_7_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_7_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_7_权重",
+          "localized_name": "LoRA_7_权重",
+          "name": "lora_7_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_7_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_7_model_strength",
+          "name": "lora_7_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_7_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_7_clip_strength",
+          "name": "lora_7_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_7_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_8_名称",
+          "localized_name": "LoRA_8_名称",
+          "name": "lora_8_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_8_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_8_权重",
+          "localized_name": "LoRA_8_权重",
+          "name": "lora_8_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_8_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_8_model_strength",
+          "name": "lora_8_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_8_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_8_clip_strength",
+          "name": "lora_8_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_8_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_9_名称",
+          "localized_name": "LoRA_9_名称",
+          "name": "lora_9_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_9_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_9_权重",
+          "localized_name": "LoRA_9_权重",
+          "name": "lora_9_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_9_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_9_model_strength",
+          "name": "lora_9_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_9_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_9_clip_strength",
+          "name": "lora_9_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_9_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_10_名称",
+          "localized_name": "LoRA_10_名称",
+          "name": "lora_10_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_10_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_10_权重",
+          "localized_name": "LoRA_10_权重",
+          "name": "lora_10_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_10_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_10_model_strength",
+          "name": "lora_10_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_10_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_10_clip_strength",
+          "name": "lora_10_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_10_clip_strength"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "LoRA堆",
+          "localized_name": "LoRA堆",
+          "name": "lora_stack",
+          "type": "LORA_STACK",
+          "links": [
+            241
+          ]
+        }
+      ],
+      "title": "画质和细节",
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1.3.6",
+        "Node name for S&R": "easy loraStack"
+      },
+      "widgets_values": [
+        true,
+        "simple",
+        4,
+        "Anima\\semi-realisticV3.5.safetensors",
+        0.5,
+        1,
+        1,
+        "Anima\\Anima_in_real_update_v2_epoch_20.safetensors",
+        0.5,
+        1,
+        1,
+        "Anima\\anima-highres-aesthetic-boost.safetensors",
+        0.5,
+        1,
+        1,
+        "Anima\\anima_context_detailer_base10.safetensors",
+        0.7,
+        1,
+        1,
+        "Anima\\gpt-image-2_anima-base1_v1-1.safetensors",
+        0.3,
+        1,
+        1,
+        "Anima\\semi-realisticV3.5.safetensors",
+        0,
+        1,
+        1,
+        "Anima\\anima_context_detailer_base10.safetensors",
+        0,
+        1,
+        1,
+        "Anima\\Anima_in_real_update_v2_epoch_20.safetensors",
+        0,
+        1,
+        1,
+        "Anima\\anima-highres-aesthetic-boost.safetensors",
+        1,
+        1,
+        1,
+        "Anima\\Anima_3d skin.safetensors",
+        0,
+        1,
+        1
+      ],
+      "widgets_values_named": {
+        "toggle": true,
+        "mode": "simple",
+        "num_loras": 4,
+        "lora_1_name": "Anima\\semi-realisticV3.5.safetensors",
+        "lora_1_strength": 0.5,
+        "lora_1_model_strength": 1,
+        "lora_1_clip_strength": 1,
+        "lora_2_name": "Anima\\Anima_in_real_update_v2_epoch_20.safetensors",
+        "lora_2_strength": 0.5,
+        "lora_2_model_strength": 1,
+        "lora_2_clip_strength": 1,
+        "lora_3_name": "Anima\\anima-highres-aesthetic-boost.safetensors",
+        "lora_3_strength": 0.5,
+        "lora_3_model_strength": 1,
+        "lora_3_clip_strength": 1,
+        "lora_4_name": "Anima\\anima_context_detailer_base10.safetensors",
+        "lora_4_strength": 0.7,
+        "lora_4_model_strength": 1,
+        "lora_4_clip_strength": 1,
+        "lora_5_name": "Anima\\gpt-image-2_anima-base1_v1-1.safetensors",
+        "lora_5_strength": 0.3,
+        "lora_5_model_strength": 1,
+        "lora_5_clip_strength": 1,
+        "lora_6_name": "Anima\\semi-realisticV3.5.safetensors",
+        "lora_6_strength": 0,
+        "lora_6_model_strength": 1,
+        "lora_6_clip_strength": 1,
+        "lora_7_name": "Anima\\anima_context_detailer_base10.safetensors",
+        "lora_7_strength": 0,
+        "lora_7_model_strength": 1,
+        "lora_7_clip_strength": 1,
+        "lora_8_name": "Anima\\Anima_in_real_update_v2_epoch_20.safetensors",
+        "lora_8_strength": 0,
+        "lora_8_model_strength": 1,
+        "lora_8_clip_strength": 1,
+        "lora_9_name": "Anima\\anima-highres-aesthetic-boost.safetensors",
+        "lora_9_strength": 1,
+        "lora_9_model_strength": 1,
+        "lora_9_clip_strength": 1,
+        "lora_10_name": "Anima\\Anima_3d skin.safetensors",
+        "lora_10_strength": 0,
+        "lora_10_model_strength": 1,
+        "lora_10_clip_strength": 1
+      }
+    },
+    {
+      "id": 106,
+      "type": "easy loraStack",
+      "pos": [
+        403.40971264819825,
+        1811.6815357029288
+      ],
+      "size": [
+        534.4078083657041,
+        154
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "LoRA堆（可选）",
+          "localized_name": "LoRA堆（可选）",
+          "name": "optional_lora_stack",
+          "shape": 7,
+          "type": "LORA_STACK",
+          "link": null
+        },
+        {
+          "label": "开关",
+          "localized_name": "开关",
+          "name": "toggle",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "toggle"
+          },
+          "link": null
+        },
+        {
+          "label": "模式",
+          "localized_name": "模式",
+          "name": "mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "mode"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA数量",
+          "localized_name": "LoRA数量",
+          "name": "num_loras",
+          "type": "INT",
+          "widget": {
+            "name": "num_loras"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_1_名称",
+          "localized_name": "LoRA_1_名称",
+          "name": "lora_1_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_1_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_1_权重",
+          "localized_name": "LoRA_1_权重",
+          "name": "lora_1_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_1_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_1_model_strength",
+          "name": "lora_1_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_1_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_1_clip_strength",
+          "name": "lora_1_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_1_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_2_名称",
+          "localized_name": "LoRA_2_名称",
+          "name": "lora_2_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_2_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_2_权重",
+          "localized_name": "LoRA_2_权重",
+          "name": "lora_2_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_2_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_2_model_strength",
+          "name": "lora_2_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_2_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_2_clip_strength",
+          "name": "lora_2_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_2_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_3_名称",
+          "localized_name": "LoRA_3_名称",
+          "name": "lora_3_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_3_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_3_权重",
+          "localized_name": "LoRA_3_权重",
+          "name": "lora_3_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_3_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_3_model_strength",
+          "name": "lora_3_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_3_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_3_clip_strength",
+          "name": "lora_3_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_3_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_4_名称",
+          "localized_name": "LoRA_4_名称",
+          "name": "lora_4_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_4_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_4_权重",
+          "localized_name": "LoRA_4_权重",
+          "name": "lora_4_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_4_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_4_model_strength",
+          "name": "lora_4_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_4_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_4_clip_strength",
+          "name": "lora_4_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_4_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_5_名称",
+          "localized_name": "LoRA_5_名称",
+          "name": "lora_5_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_5_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_5_权重",
+          "localized_name": "LoRA_5_权重",
+          "name": "lora_5_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_5_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_5_model_strength",
+          "name": "lora_5_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_5_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_5_clip_strength",
+          "name": "lora_5_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_5_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_6_名称",
+          "localized_name": "LoRA_6_名称",
+          "name": "lora_6_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_6_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_6_权重",
+          "localized_name": "LoRA_6_权重",
+          "name": "lora_6_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_6_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_6_model_strength",
+          "name": "lora_6_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_6_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_6_clip_strength",
+          "name": "lora_6_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_6_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_7_名称",
+          "localized_name": "LoRA_7_名称",
+          "name": "lora_7_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_7_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_7_权重",
+          "localized_name": "LoRA_7_权重",
+          "name": "lora_7_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_7_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_7_model_strength",
+          "name": "lora_7_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_7_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_7_clip_strength",
+          "name": "lora_7_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_7_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_8_名称",
+          "localized_name": "LoRA_8_名称",
+          "name": "lora_8_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_8_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_8_权重",
+          "localized_name": "LoRA_8_权重",
+          "name": "lora_8_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_8_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_8_model_strength",
+          "name": "lora_8_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_8_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_8_clip_strength",
+          "name": "lora_8_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_8_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_9_名称",
+          "localized_name": "LoRA_9_名称",
+          "name": "lora_9_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_9_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_9_权重",
+          "localized_name": "LoRA_9_权重",
+          "name": "lora_9_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_9_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_9_model_strength",
+          "name": "lora_9_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_9_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_9_clip_strength",
+          "name": "lora_9_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_9_clip_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_10_名称",
+          "localized_name": "LoRA_10_名称",
+          "name": "lora_10_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_10_name"
+          },
+          "link": null
+        },
+        {
+          "label": "LoRA_10_权重",
+          "localized_name": "LoRA_10_权重",
+          "name": "lora_10_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_10_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_10_model_strength",
+          "name": "lora_10_model_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_10_model_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_10_clip_strength",
+          "name": "lora_10_clip_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_10_clip_strength"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "LoRA堆",
+          "localized_name": "LoRA堆",
+          "name": "lora_stack",
+          "type": "LORA_STACK",
+          "links": [
+            243
+          ]
+        }
+      ],
+      "title": "人物",
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1.3.6",
+        "Node name for S&R": "easy loraStack"
+      },
+      "widgets_values": [
+        true,
+        "simple",
+        1,
+        "None",
+        0,
+        1,
+        1,
+        "Anima\\Anima_in_real_update_v2_epoch_20.safetensors",
+        0.5,
+        1,
+        1,
+        "Anima\\anima-highres-aesthetic-boost.safetensors",
+        0.5,
+        1,
+        1,
+        "Anima\\anima_context_detailer_base10.safetensors",
+        0.7,
+        1,
+        1,
+        "Anima\\gpt-image-2_anima-base1_v1-1.safetensors",
+        0.3,
+        1,
+        1,
+        "Anima\\semi-realisticV3.5.safetensors",
+        0,
+        1,
+        1,
+        "Anima\\anima_context_detailer_base10.safetensors",
+        0,
+        1,
+        1,
+        "Anima\\Anima_in_real_update_v2_epoch_20.safetensors",
+        0,
+        1,
+        1,
+        "Anima\\anima-highres-aesthetic-boost.safetensors",
+        1,
+        1,
+        1,
+        "Anima\\Anima_3d skin.safetensors",
+        0,
+        1,
+        1
+      ],
+      "widgets_values_named": {
+        "toggle": true,
+        "mode": "simple",
+        "num_loras": 1,
+        "lora_1_name": "None",
+        "lora_1_strength": 0,
+        "lora_1_model_strength": 1,
+        "lora_1_clip_strength": 1,
+        "lora_2_name": "Anima\\Anima_in_real_update_v2_epoch_20.safetensors",
+        "lora_2_strength": 0.5,
+        "lora_2_model_strength": 1,
+        "lora_2_clip_strength": 1,
+        "lora_3_name": "Anima\\anima-highres-aesthetic-boost.safetensors",
+        "lora_3_strength": 0.5,
+        "lora_3_model_strength": 1,
+        "lora_3_clip_strength": 1,
+        "lora_4_name": "Anima\\anima_context_detailer_base10.safetensors",
+        "lora_4_strength": 0.7,
+        "lora_4_model_strength": 1,
+        "lora_4_clip_strength": 1,
+        "lora_5_name": "Anima\\gpt-image-2_anima-base1_v1-1.safetensors",
+        "lora_5_strength": 0.3,
+        "lora_5_model_strength": 1,
+        "lora_5_clip_strength": 1,
+        "lora_6_name": "Anima\\semi-realisticV3.5.safetensors",
+        "lora_6_strength": 0,
+        "lora_6_model_strength": 1,
+        "lora_6_clip_strength": 1,
+        "lora_7_name": "Anima\\anima_context_detailer_base10.safetensors",
+        "lora_7_strength": 0,
+        "lora_7_model_strength": 1,
+        "lora_7_clip_strength": 1,
+        "lora_8_name": "Anima\\Anima_in_real_update_v2_epoch_20.safetensors",
+        "lora_8_strength": 0,
+        "lora_8_model_strength": 1,
+        "lora_8_clip_strength": 1,
+        "lora_9_name": "Anima\\anima-highres-aesthetic-boost.safetensors",
+        "lora_9_strength": 1,
+        "lora_9_model_strength": 1,
+        "lora_9_clip_strength": 1,
+        "lora_10_name": "Anima\\Anima_3d skin.safetensors",
+        "lora_10_strength": 0,
+        "lora_10_model_strength": 1,
+        "lora_10_clip_strength": 1
+      }
+    },
+    {
+      "id": 63,
+      "type": "PreviewImage",
+      "pos": [
+        2802.5355009397667,
+        658.4185908751297
+      ],
+      "size": [
+        140,
+        246.00000000000006
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 116
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.35.1",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 28,
+      "type": "LatentUpscaleBy",
+      "pos": [
+        3302.4723201762595,
+        670.6331436254712
+      ],
+      "size": [
+        330,
+        150
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 237
+        },
+        {
+          "localized_name": "缩放算法",
+          "name": "upscale_method",
+          "type": "COMBO",
+          "widget": {
+            "name": "upscale_method"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "缩放比例",
+          "name": "scale_by",
+          "type": "FLOAT",
+          "widget": {
+            "name": "scale_by"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            144
+          ]
+        }
+      ],
+      "title": "2.5D：Latent 放大 1.5×",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.35.1",
+        "Node name for S&R": "LatentUpscaleBy",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "upscale_method": true,
+            "scale_by": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "nearest-exact",
+        1.3
+      ],
+      "widgets_values_named": {
+        "upscale_method": "nearest-exact",
+        "scale_by": 1.3
+      }
+    },
+    {
+      "id": 76,
+      "type": "KSampler",
+      "pos": [
+        2421.8722007597926,
+        407.48206483523705
+      ],
+      "size": [
+        248.5050898647769,
+        474.0000000000001
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 195
+        },
+        {
+          "localized_name": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 166
+        },
+        {
+          "localized_name": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 167
+        },
+        {
+          "localized_name": "Latent图像",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 162
+        },
+        {
+          "localized_name": "种子",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": 157
+        },
+        {
+          "localized_name": "步数",
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg",
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "采样器名称",
+          "name": "sampler_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "sampler_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "调度器",
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "降噪",
+          "name": "denoise",
+          "type": "FLOAT",
+          "widget": {
+            "name": "denoise"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            163,
+            237
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.35.1",
+        "Node name for S&R": "KSampler",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "seed": true,
+            "steps": true,
+            "cfg": true,
+            "sampler_name": true,
+            "scheduler": true,
+            "denoise": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        233107080273490,
+        "randomize",
+        30,
+        7,
+        "euler",
+        "simple",
+        1
+      ],
+      "widgets_values_named": {
+        "seed": 233107080273490,
+        "control_after_generate": "randomize",
+        "steps": 30,
+        "cfg": 7,
+        "sampler_name": "euler",
+        "scheduler": "simple",
+        "denoise": 1
+      }
+    },
+    {
+      "id": 94,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1072.2185159908984,
+        629.1155689848516
+      ],
+      "size": [
+        496.95692384300787,
+        212.71888106445954
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "值",
+          "name": "value",
+          "type": "STRING",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            239
+          ]
+        }
+      ],
+      "title": "正面2",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.35.1",
+        "Node name for S&R": "PrimitiveStringMultiline",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "value": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        ""
+      ],
+      "widgets_values_named": {
+        "value": ""
+      },
+      "color": "#5a3037",
+      "bgcolor": "#2d6049"
+    },
+    {
+      "id": 91,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1054.3362817306825,
+        435.53245274379157
+      ],
+      "size": [
+        461.36797008996314,
+        88
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "值",
+          "name": "value",
+          "type": "STRING",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            238
+          ]
+        }
+      ],
+      "title": "正面",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.35.1",
+        "Node name for S&R": "PrimitiveStringMultiline",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "value": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "masterpiece, best quality, absurdres, 1girl, solo,\nlong silver hair, straight hair, blue eyes, hair ribbon,\nwhite blouse, navy pleated skirt, standing on a rooftop,\nlooking at viewer, gentle smile,\nsunset, warm lighting, city skyline background,\ncinematic composition, detailed background\n"
+      ],
+      "widgets_values_named": {
+        "value": "masterpiece, best quality, absurdres, 1girl, solo,\nlong silver hair, straight hair, blue eyes, hair ribbon,\nwhite blouse, navy pleated skirt, standing on a rooftop,\nlooking at viewer, gentle smile,\nsunset, warm lighting, city skyline background,\ncinematic composition, detailed background\n"
+      },
+      "color": "#5a3037",
+      "bgcolor": "#2d6049"
+    },
+    {
+      "id": 5,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1052.485745641315,
+        256.1560348673819
+      ],
+      "size": [
+        471.99269547930385,
+        103.46667110737434
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "值",
+          "name": "value",
+          "type": "STRING",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            16
+          ]
+        }
+      ],
+      "title": "负面",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.35.1",
+        "Node name for S&R": "PrimitiveStringMultiline",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "value": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "lowres, bad_quality, worst_quality, jpeg_artifacts, blurry,\ndeformed, ugly, bad_face, asymmetric_eyes, cross_eyed,\nextra_fingers, mutated_hands, poorly_drawn_hands,\nbad_anatomy, bad_proportions, extra_arms, extra_legs, missing_limbs, fused_fingers, too_many_fingers,\nwatermark, signature, text, username, censored,\nlow contrast, oversaturated, oversharpened\n"
+      ],
+      "widgets_values_named": {
+        "value": "lowres, bad_quality, worst_quality, jpeg_artifacts, blurry,\ndeformed, ugly, bad_face, asymmetric_eyes, cross_eyed,\nextra_fingers, mutated_hands, poorly_drawn_hands,\nbad_anatomy, bad_proportions, extra_arms, extra_legs, missing_limbs, fused_fingers, too_many_fingers,\nwatermark, signature, text, username, censored,\nlow contrast, oversaturated, oversharpened\n"
+      },
+      "color": "#5a3037",
+      "bgcolor": "#2d6049"
+    }
+  ],
+  "links": [
+    [
+      16,
+      5,
+      0,
+      21,
+      1,
+      "STRING"
+    ],
+    [
+      116,
+      52,
+      0,
+      63,
+      0,
+      "IMAGE"
+    ],
+    [
+      142,
+      20,
+      0,
+      75,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      143,
+      21,
+      0,
+      75,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      144,
+      28,
+      0,
+      75,
+      3,
+      "LATENT"
+    ],
+    [
+      146,
+      6,
+      0,
+      75,
+      4,
+      "INT"
+    ],
+    [
+      154,
+      67,
+      0,
+      52,
+      1,
+      "VAE"
+    ],
+    [
+      157,
+      6,
+      0,
+      76,
+      4,
+      "INT"
+    ],
+    [
+      162,
+      9,
+      0,
+      76,
+      3,
+      "LATENT"
+    ],
+    [
+      163,
+      76,
+      0,
+      52,
+      0,
+      "LATENT"
+    ],
+    [
+      166,
+      20,
+      0,
+      76,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      167,
+      21,
+      0,
+      76,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      184,
+      81,
+      0,
+      86,
+      0,
+      "LORA_STACK"
+    ],
+    [
+      193,
+      68,
+      0,
+      86,
+      1,
+      "MODEL"
+    ],
+    [
+      194,
+      69,
+      0,
+      86,
+      2,
+      "CLIP"
+    ],
+    [
+      195,
+      86,
+      0,
+      76,
+      0,
+      "MODEL"
+    ],
+    [
+      196,
+      86,
+      0,
+      75,
+      0,
+      "MODEL"
+    ],
+    [
+      197,
+      86,
+      1,
+      20,
+      0,
+      "CLIP"
+    ],
+    [
+      198,
+      86,
+      1,
+      21,
+      0,
+      "CLIP"
+    ],
+    [
+      217,
+      57,
+      0,
+      20,
+      1,
+      "STRING"
+    ],
+    [
+      221,
+      93,
+      0,
+      57,
+      0,
+      "STRING"
+    ],
+    [
+      225,
+      75,
+      0,
+      96,
+      0,
+      "LATENT"
+    ],
+    [
+      226,
+      67,
+      0,
+      96,
+      1,
+      "VAE"
+    ],
+    [
+      227,
+      96,
+      0,
+      35,
+      0,
+      "IMAGE"
+    ],
+    [
+      237,
+      76,
+      0,
+      28,
+      0,
+      "LATENT"
+    ],
+    [
+      238,
+      91,
+      0,
+      102,
+      0,
+      "STRING"
+    ],
+    [
+      239,
+      94,
+      0,
+      102,
+      1,
+      "STRING"
+    ],
+    [
+      240,
+      102,
+      0,
+      93,
+      0,
+      "STRING"
+    ],
+    [
+      241,
+      103,
+      0,
+      81,
+      0,
+      "LORA_STACK"
+    ],
+    [
+      243,
+      106,
+      0,
+      103,
+      0,
+      "LORA_STACK"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "基本",
+      "bounding": [
+        -1196.5224715256954,
+        -6.262572836235025,
+        1463.7339748426762,
+        1401.7532465286513
+      ],
+      "color": "#3b8b68",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "模型",
+      "bounding": [
+        350.26129366795465,
+        -6.476720144255491,
+        707.8594339593943,
+        915.292393499654
+      ],
+      "color": "#7b5a3f",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "组合",
+      "bounding": [
+        1121.3422161130272,
+        124.47347713327174,
+        1143.9984495377128,
+        959.9530362072807
+      ],
+      "color": "#6e7541",
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "保存",
+      "bounding": [
+        4418.064245117773,
+        204.70963751021404,
+        900.5487876258767,
+        754.1982157435945
+      ],
+      "color": "#4f8068",
+      "flags": {}
+    },
+    {
+      "id": 8,
+      "title": "第二次采样",
+      "bounding": [
+        3236.3620147934535,
+        158.0680151001426,
+        1116.8731546070949,
+        856.43363243079
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 9,
+      "title": "第一次采样",
+      "bounding": [
+        2300.6492623830704,
+        140.9250326262546,
+        854.8212355855085,
+        886.9781601767364
+      ],
+      "color": "#a1309b",
+      "flags": {}
+    },
+    {
+      "id": 10,
+      "title": "lora",
+      "bounding": [
+        334.0129464554601,
+        923.9662253106995,
+        705.7884736822645,
+        1076.2545315654538
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8366947261685166,
+      "offset": [
+        1260.0756833567486,
+        -49.08171438386049
+      ]
+    },
+    "workflow_notes": "Anima 双段采样工作流（RDNA1 / RX 5700 XT 8GB 适配版）。768x1152 底图 30 步 euler/simple -> 1.3x 潜空间放大 -> 15 步 dpmpp_2m/karras 重绘(denoise 0.7) -> 分块 VAE 解码。",
+    "ue_links": [],
+    "frontendVersion": "1.51.10",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "rdna1": {
+      "target_gpu": "AMD Radeon RX 5700 XT 8GB (gfx1010, RDNA1)",
+      "backend": "ROCm 7.2 / torch 2.9.1+rocm7.12.0a20260207 (Windows)",
+      "comfyui": "v0.34.4",
+      "notes": "9 LoRA (5 画风 + 4 画质)，easy-use loraStack 串联后一次性 Apply"
+    }
+  },
+  "version": 0.4
+}
